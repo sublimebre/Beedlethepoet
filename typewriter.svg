@@ -1,0 +1,561 @@
+<!-- 
+  Smith Corona 1943 "Sterling" / "Black Beauty" typewriter illustration
+  Front-facing view. Paper feeds out through the platen (top of machine).
+  Embed this SVG inline in the .typewriter-footer div on every page.
+  
+  Machine proportions based on the 1943 Smith Corona portable:
+  - Wide low profile body (~2:1 width:height)
+  - Prominent carriage/platen bar across the top
+  - Two ribbon spool towers flanking the carriage
+  - 4 rows of round glass-topped keys
+  - Distinctive curved front skirt
+  - Side carriage return lever (left)
+  - Paper bail bar across the platen
+-->
+<svg viewBox="0 0 780 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <!-- Key top glass reflection gradient -->
+    <radialGradient id="keyGlass" cx="35%" cy="30%" r="60%">
+      <stop offset="0%"   stop-color="#d4cfc8" stop-opacity="0.9"/>
+      <stop offset="40%"  stop-color="#8a8078" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2a2018" stop-opacity="0.9"/>
+    </radialGradient>
+    <!-- Chrome highlight gradient -->
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b0a898"/>
+      <stop offset="30%"  stop-color="#8a8070"/>
+      <stop offset="70%"  stop-color="#5a5448"/>
+      <stop offset="100%" stop-color="#3a3428"/>
+    </linearGradient>
+    <!-- Platen cylinder gradient -->
+    <linearGradient id="platenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3a3020"/>
+      <stop offset="20%"  stop-color="#1a1410"/>
+      <stop offset="50%"  stop-color="#0e0c08"/>
+      <stop offset="80%"  stop-color="#1a1410"/>
+      <stop offset="100%" stop-color="#2e2820"/>
+    </linearGradient>
+    <!-- Body gradient — deep dark olive-black -->
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2e2820"/>
+      <stop offset="40%"  stop-color="#1a1410"/>
+      <stop offset="100%" stop-color="#0e0c08"/>
+    </linearGradient>
+    <!-- Body side sheen -->
+    <linearGradient id="bodySide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#3a3028"/>
+      <stop offset="50%"  stop-color="#1a1410"/>
+      <stop offset="100%" stop-color="#0e0c08"/>
+    </linearGradient>
+    <!-- Spool gradient -->
+    <radialGradient id="spoolGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%"   stop-color="#5a5040"/>
+      <stop offset="60%"  stop-color="#2a2418"/>
+      <stop offset="100%" stop-color="#0e0c08"/>
+    </radialGradient>
+    <!-- Paper shadow falling onto platen -->
+    <linearGradient id="paperShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="rgba(0,0,0,0.5)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </linearGradient>
+    <!-- Space bar gradient -->
+    <linearGradient id="spaceGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3a3028"/>
+      <stop offset="50%"  stop-color="#1e1a12"/>
+      <stop offset="100%" stop-color="#0e0c08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ══ CARRIAGE ASSEMBLY (top of machine — paper exits here) ══ -->
+
+  <!-- Carriage base plate — wide rail that holds the platen -->
+  <rect x="30" y="18" width="720" height="22" rx="3" fill="url(#chrome)" />
+  <!-- Carriage rail highlight -->
+  <rect x="30" y="18" width="720" height="4" rx="2" fill="#c8c0b0" opacity="0.6"/>
+
+  <!-- Platen cylinder — the rubber roller the paper wraps around -->
+  <rect x="60" y="8" width="660" height="32" rx="16" fill="url(#platenGrad)"/>
+  <!-- Platen highlight strip (rubber texture) -->
+  <rect x="60" y="10" width="660" height="5" rx="2" fill="#2a2418" opacity="0.5"/>
+  <rect x="60" y="12" width="660" height="2" rx="1" fill="#4a4030" opacity="0.4"/>
+  <!-- Platen knob left -->
+  <circle cx="62" cy="24" r="14" fill="url(#spoolGrad)"/>
+  <circle cx="62" cy="24" r="9"  fill="#1a1610"/>
+  <circle cx="62" cy="24" r="4"  fill="#3a3020"/>
+  <circle cx="59" cy="21" r="1.5" fill="#6a5a48" opacity="0.8"/>
+  <!-- Platen knob right -->
+  <circle cx="718" cy="24" r="14" fill="url(#spoolGrad)"/>
+  <circle cx="718" cy="24" r="9"  fill="#1a1610"/>
+  <circle cx="718" cy="24" r="4"  fill="#3a3020"/>
+  <circle cx="715" cy="21" r="1.5" fill="#6a5a48" opacity="0.8"/>
+
+  <!-- Paper bail wire (thin bar that presses paper to platen) -->
+  <rect x="100" y="6" width="580" height="3" rx="1.5" fill="#7a7060" opacity="0.9"/>
+  <!-- Paper bail arms -->
+  <rect x="180" y="4" width="4" height="16" rx="2" fill="#8a7a68"/>
+  <rect x="596" y="4" width="4" height="16" rx="2" fill="#8a7a68"/>
+
+  <!-- Paper slot shadow — where paper emerges from -->
+  <rect x="80" y="38" width="620" height="6" rx="1" fill="rgba(0,0,0,0.5)"/>
+
+  <!-- Carriage return lever (left side, arcing up) -->
+  <path d="M 45 30 Q 22 15 18 5" stroke="#7a7060" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="18" cy="5" r="5" fill="#6a5a48"/>
+  <circle cx="18" cy="5" r="2" fill="#3a3020"/>
+
+  <!-- Carriage position indicator tab (right side) -->
+  <rect x="730" y="22" width="16" height="8" rx="2" fill="#5a5040"/>
+
+  <!-- ══ RIBBON SPOOL TOWERS ══ -->
+
+  <!-- Left spool tower housing -->
+  <rect x="68" y="40" width="54" height="52" rx="4" fill="#1a1610"/>
+  <rect x="68" y="40" width="54" height="8"  rx="4" fill="#2e2820"/>
+  <!-- Left ribbon spool -->
+  <ellipse cx="95" cy="72" rx="20" ry="18" fill="url(#spoolGrad)"/>
+  <ellipse cx="95" cy="72" rx="14" ry="12" fill="#1a1610"/>
+  <ellipse cx="95" cy="72" rx="5"  ry="5"  fill="#3a3020"/>
+  <!-- Spool hub spokes -->
+  <line x1="95" y1="60" x2="95" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="83" y1="67" x2="95" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="83" y1="77" x2="95" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="95" y1="84" x2="95" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="107" y1="77" x2="95" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="107" y1="67" x2="95" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <!-- Ribbon coming off left spool -->
+  <path d="M 115 68 Q 145 60 160 78" stroke="#8b1818" stroke-width="2" fill="none" opacity="0.8"/>
+
+  <!-- Right spool tower housing -->
+  <rect x="658" y="40" width="54" height="52" rx="4" fill="#1a1610"/>
+  <rect x="658" y="40" width="54" height="8"  rx="4" fill="#2e2820"/>
+  <!-- Right ribbon spool -->
+  <ellipse cx="685" cy="72" rx="20" ry="18" fill="url(#spoolGrad)"/>
+  <ellipse cx="685" cy="72" rx="14" ry="12" fill="#1a1610"/>
+  <ellipse cx="685" cy="72" rx="5"  ry="5"  fill="#3a3020"/>
+  <!-- Spool hub spokes -->
+  <line x1="685" y1="60" x2="685" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="673" y1="67" x2="685" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="673" y1="77" x2="685" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="685" y1="84" x2="685" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="697" y1="77" x2="685" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <line x1="697" y1="67" x2="685" y2="72" stroke="#4a4030" stroke-width="1.5"/>
+  <!-- Ribbon coming off right spool -->
+  <path d="M 658 68 Q 632 60 620 78" stroke="#8b1818" stroke-width="2" fill="none" opacity="0.8"/>
+
+  <!-- ══ MAIN BODY ══ -->
+
+  <!-- Body — low profile, slightly wider at base, curved corners -->
+  <path d="
+    M 40 92
+    L 740 92
+    L 752 100
+    L 758 140
+    L 760 200
+    Q 760 220 740 222
+    L 40 222
+    Q 20 222 20 200
+    L 22 140
+    L 28 100
+    Z
+  " fill="url(#bodyGrad)"/>
+
+  <!-- Body top panel (keyboard deck) — slightly lighter -->
+  <path d="
+    M 44 92
+    L 736 92
+    L 748 100
+    L 748 150
+    L 32 150
+    L 32 100
+    Z
+  " fill="#222018" opacity="0.8"/>
+
+  <!-- Body front curved skirt -->
+  <path d="
+    M 22 200
+    Q 20 222 40 225
+    L 740 225
+    Q 760 225 758 200
+    L 760 200
+    Q 760 222 740 228
+    L 40 228
+    Q 18 228 20 200
+    Z
+  " fill="#161208"/>
+
+  <!-- Side vents (left) -->
+  <rect x="22" y="165" width="10" height="2" rx="1" fill="#3a3020" opacity="0.7"/>
+  <rect x="22" y="170" width="10" height="2" rx="1" fill="#3a3020" opacity="0.7"/>
+  <rect x="22" y="175" width="10" height="2" rx="1" fill="#3a3020" opacity="0.7"/>
+  <rect x="22" y="180" width="10" height="2" rx="1" fill="#3a3020" opacity="0.7"/>
+
+  <!-- Side vents (right) -->
+  <rect x="748" y="165" width="10" height="2" rx="1" fill="#3a3020" opacity="0.7"/>
+  <rect x="748" y="170" width="10" height="2" rx="1" fill="#3a3020" opacity="0.7"/>
+  <rect x="748" y="175" width="10" height="2" rx="1" fill="#3a3020" opacity="0.7"/>
+  <rect x="748" y="180" width="10" height="2" rx="1" fill="#3a3020" opacity="0.7"/>
+
+  <!-- Body embossed name plate area -->
+  <rect x="320" y="200" width="140" height="16" rx="3" fill="#161208"/>
+  <rect x="322" y="202" width="136" height="12" rx="2" fill="#1e1c12" opacity="0.5"/>
+  <!-- "SMITH-CORONA" text (stylized) -->
+  <text x="390" y="213" font-family="Georgia, serif" font-size="7" font-weight="bold"
+        fill="#6a5a40" text-anchor="middle" letter-spacing="2">SMITH-CORONA</text>
+
+  <!-- ══ PAPER GUIDE / FEED MECHANISM ══ -->
+  <!-- The slot where paper comes through, just below platen -->
+  <rect x="80" y="88" width="620" height="10" rx="2" fill="#0e0c08"/>
+  <!-- Feed roller hints -->
+  <rect x="100" y="90" width="8" height="6" rx="3" fill="#2a2418"/>
+  <rect x="200" y="90" width="8" height="6" rx="3" fill="#2a2418"/>
+  <rect x="320" y="90" width="8" height="6" rx="3" fill="#2a2418"/>
+  <rect x="440" y="90" width="8" height="6" rx="3" fill="#2a2418"/>
+  <rect x="560" y="90" width="8" height="6" rx="3" fill="#2a2418"/>
+  <rect x="672" y="90" width="8" height="6" rx="3" fill="#2a2418"/>
+
+  <!-- ══ TYPEBAR GUIDE / TYPE BASKET (visible arch below paper feed) ══ -->
+  <path d="M 160 148 Q 390 125 620 148" stroke="#2a2418" stroke-width="3" fill="none"/>
+  <path d="M 165 152 Q 390 130 615 152" stroke="#1a1410" stroke-width="2" fill="none" opacity="0.6"/>
+
+  <!-- ══ KEY ROWS ══ -->
+  <!-- 
+    Smith Corona 1943 key layout (front view):
+    Row 4 (top, numbers): 13 keys, offset slightly left
+    Row 3 (QWERTY): 13 keys
+    Row 2 (ASDF): 12 keys, slightly wider
+    Row 1 (ZXCV): 10 keys
+    Space bar below
+  -->
+
+  <!-- Key dimensions: outer ring 17px, inner glass 12px -->
+  <!-- Row 4: Number row — y=108 -->
+  <!-- Keys: ! 1 2 3 4 5 6 7 8 9 0 - = (13 keys) -->
+  <!-- Starting x=118, step=42 -->
+
+  <!-- Helper: each key = outer dark circle + chrome rim + glass top -->
+  <!-- I'll define each key group inline for precision -->
+
+  <!-- ROW 4 (numbers) — y center = 116 -->
+  <g id="row4">
+    <!-- key macro: cx, label -->
+    <!-- 13 keys from x=112 step ~43 -->
+    <!-- Generating each key: outer=17r chrome, middle=13r dark, inner=10r glass -->
+
+    <!-- Key at 112 -->
+    <circle cx="112" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="112" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="112" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="112" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">!</text>
+
+    <circle cx="155" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="155" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="155" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="155" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">1</text>
+
+    <circle cx="198" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="198" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="198" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="198" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">2</text>
+
+    <circle cx="241" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="241" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="241" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="241" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">3</text>
+
+    <circle cx="284" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="284" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="284" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="284" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">4</text>
+
+    <circle cx="327" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="327" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="327" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="327" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">5</text>
+
+    <circle cx="370" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="370" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="370" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="370" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">6</text>
+
+    <circle cx="413" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="413" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="413" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="413" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">7</text>
+
+    <circle cx="456" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="456" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="456" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="456" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">8</text>
+
+    <circle cx="499" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="499" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="499" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="499" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">9</text>
+
+    <circle cx="542" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="542" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="542" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="542" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">0</text>
+
+    <circle cx="585" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="585" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="585" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="585" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">-</text>
+
+    <circle cx="628" cy="116" r="17" fill="#3a3020"/>
+    <circle cx="628" cy="116" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="628" cy="116" r="10" fill="url(#keyGlass)"/>
+    <text x="628" y="120" font-family="'Special Elite',monospace" font-size="7" fill="#c8c0b0" text-anchor="middle">=</text>
+
+    <!-- Backspace key (wider) -->
+    <rect x="652" y="99" width="82" height="34" rx="17" fill="#3a3020"/>
+    <rect x="655" y="102" width="76" height="28" rx="14" fill="#1a1410"/>
+    <rect x="657" y="104" width="72" height="24" rx="12" fill="url(#keyGlass)"/>
+    <text x="693" y="120" font-family="'Special Elite',monospace" font-size="6.5" fill="#c8c0b0" text-anchor="middle">←</text>
+  </g>
+
+  <!-- ROW 3 (QWERTY) — y center = 140 -->
+  <g id="row3">
+    <!-- Tab key -->
+    <rect x="78" y="123" width="52" height="34" rx="17" fill="#3a3020"/>
+    <rect x="81" y="126" width="46" height="28" rx="14" fill="#1a1410"/>
+    <rect x="83" y="128" width="42" height="24" rx="12" fill="url(#keyGlass)"/>
+    <text x="104" y="143" font-family="'Special Elite',monospace" font-size="6" fill="#c8c0b0" text-anchor="middle">TAB</text>
+
+    <circle cx="155" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="155" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="155" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="155" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">Q</text>
+
+    <circle cx="198" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="198" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="198" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="198" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">W</text>
+
+    <circle cx="241" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="241" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="241" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="241" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">E</text>
+
+    <circle cx="284" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="284" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="284" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="284" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">R</text>
+
+    <circle cx="327" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="327" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="327" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="327" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">T</text>
+
+    <circle cx="370" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="370" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="370" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="370" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">Y</text>
+
+    <circle cx="413" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="413" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="413" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="413" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">U</text>
+
+    <circle cx="456" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="456" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="456" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="456" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">I</text>
+
+    <circle cx="499" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="499" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="499" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="499" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">O</text>
+
+    <circle cx="542" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="542" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="542" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="542" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">P</text>
+
+    <circle cx="585" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="585" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="585" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="585" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">[</text>
+
+    <circle cx="628" cy="140" r="17" fill="#3a3020"/>
+    <circle cx="628" cy="140" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="628" cy="140" r="10" fill="url(#keyGlass)"/>
+    <text x="628" y="144" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">]</text>
+
+    <!-- Return key (wider, right side) -->
+    <rect x="652" y="123" width="82" height="34" rx="17" fill="#3a3020"/>
+    <rect x="655" y="126" width="76" height="28" rx="14" fill="#1a1410"/>
+    <rect x="657" y="128" width="72" height="24" rx="12" fill="url(#keyGlass)"/>
+    <text x="693" y="143" font-family="'Special Elite',monospace" font-size="6" fill="#c8c0b0" text-anchor="middle">RETURN</text>
+  </g>
+
+  <!-- ROW 2 (ASDF) — y center = 164 -->
+  <g id="row2">
+    <!-- Caps lock key -->
+    <rect x="78" y="147" width="62" height="34" rx="17" fill="#3a3020"/>
+    <rect x="81" y="150" width="56" height="28" rx="14" fill="#1a1410"/>
+    <rect x="83" y="152" width="52" height="24" rx="12" fill="url(#keyGlass)"/>
+    <text x="109" y="167" font-family="'Special Elite',monospace" font-size="5.5" fill="#c8c0b0" text-anchor="middle">CAPS</text>
+
+    <circle cx="164" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="164" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="164" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="164" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">A</text>
+
+    <circle cx="207" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="207" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="207" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="207" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">S</text>
+
+    <circle cx="250" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="250" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="250" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="250" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">D</text>
+
+    <circle cx="293" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="293" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="293" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="293" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">F</text>
+
+    <circle cx="336" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="336" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="336" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="336" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">G</text>
+
+    <circle cx="379" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="379" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="379" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="379" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">H</text>
+
+    <circle cx="422" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="422" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="422" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="422" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">J</text>
+
+    <circle cx="465" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="465" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="465" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="465" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">K</text>
+
+    <circle cx="508" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="508" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="508" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="508" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">L</text>
+
+    <circle cx="551" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="551" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="551" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="551" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">;</text>
+
+    <circle cx="594" cy="164" r="17" fill="#3a3020"/>
+    <circle cx="594" cy="164" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="594" cy="164" r="10" fill="url(#keyGlass)"/>
+    <text x="594" y="168" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">'</text>
+
+    <!-- Right return extension -->
+    <rect x="617" y="147" width="117" height="34" rx="17" fill="#3a3020"/>
+    <rect x="620" y="150" width="111" height="28" rx="14" fill="#1a1410"/>
+    <rect x="622" y="152" width="107" height="24" rx="12" fill="url(#keyGlass)"/>
+    <text x="675" y="167" font-family="'Special Elite',monospace" font-size="6" fill="#c8c0b0" text-anchor="middle">⏎</text>
+  </g>
+
+  <!-- ROW 1 (ZXCV) — y center = 188 -->
+  <g id="row1">
+    <!-- Left shift (wide) -->
+    <rect x="78" y="171" width="82" height="34" rx="17" fill="#3a3020"/>
+    <rect x="81" y="174" width="76" height="28" rx="14" fill="#1a1410"/>
+    <rect x="83" y="176" width="72" height="24" rx="12" fill="url(#keyGlass)"/>
+    <text x="119" y="191" font-family="'Special Elite',monospace" font-size="6" fill="#c8c0b0" text-anchor="middle">SHIFT</text>
+
+    <circle cx="184" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="184" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="184" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="184" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">Z</text>
+
+    <circle cx="227" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="227" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="227" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="227" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">X</text>
+
+    <circle cx="270" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="270" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="270" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="270" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">C</text>
+
+    <circle cx="313" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="313" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="313" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="313" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">V</text>
+
+    <circle cx="356" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="356" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="356" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="356" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">B</text>
+
+    <circle cx="399" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="399" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="399" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="399" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">N</text>
+
+    <circle cx="442" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="442" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="442" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="442" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">M</text>
+
+    <circle cx="485" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="485" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="485" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="485" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">,</text>
+
+    <circle cx="528" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="528" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="528" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="528" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">.</text>
+
+    <circle cx="571" cy="188" r="17" fill="#3a3020"/>
+    <circle cx="571" cy="188" r="13" fill="url(#bodyGrad)"/>
+    <circle cx="571" cy="188" r="10" fill="url(#keyGlass)"/>
+    <text x="571" y="192" font-family="'Special Elite',monospace" font-size="8" fill="#c8c0b0" text-anchor="middle">/</text>
+
+    <!-- Right shift (wide) -->
+    <rect x="596" y="171" width="138" height="34" rx="17" fill="#3a3020"/>
+    <rect x="599" y="174" width="132" height="28" rx="14" fill="#1a1410"/>
+    <rect x="601" y="176" width="128" height="24" rx="12" fill="url(#keyGlass)"/>
+    <text x="665" y="191" font-family="'Special Elite',monospace" font-size="6" fill="#c8c0b0" text-anchor="middle">SHIFT</text>
+  </g>
+
+  <!-- ══ SPACE BAR ROW ══ -->
+  <!-- Small modifier keys flanking the long space bar -->
+  <rect x="78"  y="210" width="52" height="30" rx="15" fill="#3a3020"/>
+  <rect x="81"  y="213" width="46" height="24" rx="12" fill="#1a1410"/>
+  <rect x="83"  y="215" width="42" height="20" rx="10" fill="url(#keyGlass)"/>
+  <text x="104" y="229" font-family="'Special Elite',monospace" font-size="5.5" fill="#c8c0b0" text-anchor="middle">CTRL</text>
+
+  <!-- Space bar (wide) -->
+  <rect x="148" y="210" width="434" height="30" rx="15" fill="#3a3020"/>
+  <rect x="151" y="213" width="428" height="24" rx="12" fill="#1a1410"/>
+  <rect x="153" y="215" width="424" height="20" rx="10" fill="url(#spaceGrad)"/>
+  <!-- Space bar chrome stabilizer bumps -->
+  <circle cx="240" cy="225" r="3" fill="#2a2418"/>
+  <circle cx="390" cy="225" r="3" fill="#2a2418"/>
+  <circle cx="540" cy="225" r="3" fill="#2a2418"/>
+
+  <rect x="596" y="210" width="52" height="30" rx="15" fill="#3a3020"/>
+  <rect x="599" y="213" width="46" height="24" rx="12" fill="#1a1410"/>
+  <rect x="601" y="215" width="42" height="20" rx="10" fill="url(#keyGlass)"/>
+  <text x="622" y="229" font-family="'Special Elite',monospace" font-size="5.5" fill="#c8c0b0" text-anchor="middle">ALT</text>
+
+  <!-- ══ MACHINE BASE / FEET ══ -->
+  <!-- Curved bottom skirt -->
+  <path d="M 30 228 Q 20 240 24 252 L 756 252 Q 760 240 750 228 Z" fill="#0e0c08"/>
+  <!-- Base plate -->
+  <rect x="24" y="250" width="732" height="14" rx="4" fill="#1a1410"/>
+  <!-- Rubber feet -->
+  <rect x="50"  y="260" width="40" height="8" rx="4" fill="#0a0808"/>
+  <rect x="160" y="260" width="40" height="8" rx="4" fill="#0a0808"/>
+  <rect x="580" y="260" width="40" height="8" rx="4" fill="#0a0808"/>
+  <rect x="690" y="260" width="40" height="8" rx="4" fill="#0a0808"/>
+
+  <!-- Paper shadow falling onto machine from above -->
+  <rect x="80" y="0" width="620" height="12" fill="url(#paperShadow)" opacity="0.6"/>
+</svg>
